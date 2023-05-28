@@ -1,0 +1,16 @@
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.AssemblyReference.cache
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\RemoveAmmo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.CoreCompileInputs.cache
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\bin\Debug\net6.0\RemoveAmmo.deps.json
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\bin\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\refint\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\DeleteAmmo\DeleteAmmo\obj\Debug\net6.0\ref\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\bin\Debug\net6.0\RemoveAmmo.deps.json
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\bin\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.AssemblyReference.cache
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.CoreCompileInputs.cache
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\refint\RemoveAmmo.dll
+C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\ref\RemoveAmmo.dll
