@@ -1,8 +1,0 @@
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\bin\Debug\net6.0\ModTemplate.deps.json
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\bin\Debug\net6.0\ModTemplate.dll
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\ModTemplate.csproj.AssemblyReference.cache
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\ModTemplate.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\ModTemplate.csproj.CoreCompileInputs.cache
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\ModTemplate.dll
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\refint\ModTemplate.dll
-C:\Users\corwi\OneDrive\Documents\TLD Modding\TheLongDarkModTemplate-main\ModTemplate\obj\Debug\net6.0\ref\ModTemplate.dll
