@@ -1,97 +1,137 @@
 ﻿using MelonLoader;
 using UnityEngine;
-using HarmonyLib;
 using Il2Cpp;
 
-namespace ModNamespace
+namespace RemoveAmmo
 {
-    public class RemoveAmmo : MelonMod
+    internal class RemoveAmmo : MelonMod
     {
-        public static readonly List<string> gunNames = new()
+        internal static readonly List<string> rifleNames = new()
         {
             "GEAR_Rifle",
             "GEAR_Rifle_Barbs",
             "GEAR_Rifle_Curators",
-            "GEAR_Rifle_Vaughns",
+            "GEAR_Rifle_Vaughns"
+        };
+
+        internal static readonly List<string> revolverNames = new()
+        {
             "GEAR_Revolver"
         };
 
-        public static readonly List<string> ammoNames = new()
+        internal static readonly List<string> rifleAmmoNames = new()
         {
             "GEAR_RifleAmmoSingle",
+            "GEAR_RifleAmmoBox"
+        };
+
+        internal static readonly List<string> revolverAmmoNames = new()
+        {
             "GEAR_RevolverAmmoSingle",
-            "GEAR_RifleAmmoBox",
             "GEAR_RevolverAmmoBox"
         };
 
-        public static readonly List<string> protectedParents = new()
+        internal static readonly List<string> protectedParents = new()
         {
             "Gear",
             "DesignGear"
         };
 
+        internal static readonly List<string> protectedScenes = new()
+        {
+            "DontDestroyOnLoad",
+            "HideAndDontSave"
+        };
+
         public override void OnInitializeMelon()
         {
-            var harmony = new HarmonyLib.Harmony("com.delete.ammo");
+            Settings.OnLoad();
+            var harmony = new HarmonyLib.Harmony("DeleteAmmo");
             harmony.PatchAll();
         }
 
-        public override void OnSceneWasLoaded(int buildIndex, string sceneName)
+        internal static void DeactivateLooseAmmo(GearItem gi)
         {
-            if (sceneName.EndsWith("_SANDBOX"))
+            if ((DoRemoveRifleAmmo() && rifleAmmoNames.Contains(gi.name)) 
+            || (DoRemoveRevolverAmmo() && revolverAmmoNames.Contains(gi.name)))
             {
-                GameObject[] activeObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
-                foreach (GameObject obj in activeObjects)
-                {
-                    if (ammoNames.Contains(obj.name))
-                    {
-                        GameObject parent = obj.transform.parent.gameObject;
-                        if (parent == null || (!protectedParents.Contains(parent.name) && !sceneName.StartsWith(parent.name)))
-                        {
-                            obj.SetActive(false);
-                        }
-                    }
-                }
+                GameObject obj = gi.gameObject;
+                if (obj.scene.name.Contains('_') || !Exempt(obj)) obj.SetActive(false);
             }
         }
-    }
-
-    [HarmonyPatch(typeof(Il2Cpp.Container), "ShowItemsAfterSearch")]
-    public class Container_ShowItemsAfterSearch_Patch
-    {
-        private static void Postfix(Il2Cpp.Container __instance)
+        internal static void ScanContainer(Il2Cpp.Container container)
         {
             Il2CppSystem.Collections.Generic.List<Il2Cpp.GearItem> allItems = new();
+            container.GetItems(allItems);
 
-            __instance.GetItems(allItems);
-            foreach (Il2Cpp.GearItem gearItem in allItems)
+            foreach (Il2Cpp.GearItem gi in allItems)
             {
-                if (RemoveAmmo.ammoNames.Contains(gearItem.name))
+                if ((DoRemoveRifleAmmo() && rifleAmmoNames.Contains(gi.name)) 
+                || (DoRemoveRevolverAmmo() && revolverAmmoNames.Contains(gi.name)))
                 {
-                    __instance.DestroyGear(gearItem);
-                }
-                else if (RemoveAmmo.gunNames.Contains(gearItem.name))
-                {
-                    var gunItem = gearItem.transform.parent?.GetComponent<GunItem>();
-                    gunItem?.EmptyClip();
+                    container.DestroyGear(gi);
                 }
             }
         }
-    }
-
-    [HarmonyPatch(typeof(Il2Cpp.GunItem), "AddRoundsToClip")]
-    public class GunItem_AddRoundsToClip_Patch
-    {
-        private static void Postfix(Il2Cpp.GunItem __instance)
+        internal static void ScanGun(Il2Cpp.GunItem gun)
         {
-            GameObject obj = __instance.transform.parent.gameObject;
-            string sceneName = obj.scene.name;
-            GameObject parent = obj.transform.parent.gameObject;
-
-            if (sceneName != null && (sceneName.EndsWith("_SANDBOX") || (!RemoveAmmo.protectedParents.Contains(parent.name) && !sceneName.StartsWith(parent.name))))
+            if (gun.NumRoundsInClip() == 0) return;
+            GameObject obj = gun.gameObject;
+            if (protectedScenes.Contains(obj.scene.name)) return;
+            if (Exempt(obj)) return;
+            if ((DoRemoveRifleAmmo() && rifleNames.Contains(gun.name)) 
+            || (DoRemoveRevolverAmmo() && revolverNames.Contains(gun.name)))
             {
-                __instance.EmptyClip();
+                gun.EmptyClip();
             }
+        }
+        internal static bool Exempt(GameObject obj)
+        {
+            GameObject parent = obj.transform.parent.gameObject;
+            if (protectedParents.Contains(parent.name)) return true;
+            if (protectedScenes.Contains(obj.scene.name)) return true;
+            if (parent.name == obj.scene.name) return true;
+            return false;
+        }
+        internal static bool DoRemoveRifleAmmo()
+        {
+            return DoRemoveAmmo("RemoveRifleAmmo_");
+        }
+        internal static bool DoRemoveRevolverAmmo()
+        {
+            return DoRemoveAmmo("RemoveRevolverAmmo_");
+        }
+        internal static bool DoRemoveAmmo(string prefix)
+        {
+            if (ExperienceModeManager.GetCurrentExperienceModeType() != ExperienceModeType.Custom) return false;
+            string saveKey = prefix + SaveGameSystem.GetCurrentSaveName();
+            if (!PlayerPrefs.HasKey(saveKey)) return false;
+            bool option = Convert.ToBoolean(PlayerPrefs.GetString(saveKey));
+            return option;
+        }
+        internal static void SaveSettings()
+        {
+            string saveName = SaveGameSystem.GetCurrentSaveName();
+            string removeRifleAmmo = Settings.options.removeRifleAmmo.ToString();
+            string removeRevolverAmmo = Settings.options.removeRevolverAmmo.ToString();
+            PlayerPrefs.SetString("RemoveRifleAmmo_" + saveName, removeRifleAmmo);
+            PlayerPrefs.SetString("RemoveRevolverAmmo_" + saveName, removeRevolverAmmo);
+            PlayerPrefs.Save();
+        }
+
+        internal static void ClearSettings()
+        {
+            Settings.options.removeRifleAmmo = false;
+            Settings.options.removeRevolverAmmo = false;
+        }
+
+        internal static void DeleteSettings(string saveName)
+        {
+            if (saveName == null) return;
+            if (saveName == SaveGameSlots.AUTOSAVE_SLOT_NAME) return;
+            if (saveName == SaveGameSlots.QUICKSAVE_SLOT_PREFIX) return;
+            PlayerPrefs.DeleteKey("RemoveRifleAmmo_" + saveName);
+            PlayerPrefs.DeleteKey("RemoveRevolverAmmo_" + saveName);
         }
     }
 }
