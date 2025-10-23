@@ -14,3 +14,15 @@ C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\ne
 C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.dll
 C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\refint\RemoveAmmo.dll
 C:\Users\corwi\OneDrive\Documents\TLD Modding\RemoveAmmo\RemoveAmmo\obj\Debug\net6.0\ref\RemoveAmmo.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.AssemblyReference.cache
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.CoreCompileInputs.cache
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.sourcelink.json
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\refint\RemoveAmmo.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\bin\Debug\net6.0\RemoveAmmo.deps.json
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\bin\Debug\net6.0\RemoveAmmo.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\bin\Debug\net6.0\ModData.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\bin\Debug\net6.0\ModSettings.dll
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\RemoveAmmo.csproj.Up2Date
+C:\Users\corwi\source\repos\Remove-Ammo\RemoveAmmo\obj\Debug\net6.0\ref\RemoveAmmo.dll

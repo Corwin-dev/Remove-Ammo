@@ -4753,24 +4753,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\corwi\\.nuget\\packages\\": {},
-    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\corwi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\corwi\\OneDrive\\Documents\\TLD Modding\\RemoveAmmo\\RemoveAmmo\\RemoveAmmo.csproj",
+      "projectUniqueName": "C:\\Users\\corwi\\source\\repos\\Remove-Ammo\\RemoveAmmo\\RemoveAmmo.csproj",
       "projectName": "RemoveAmmo",
-      "projectPath": "C:\\Users\\corwi\\OneDrive\\Documents\\TLD Modding\\RemoveAmmo\\RemoveAmmo\\RemoveAmmo.csproj",
+      "projectPath": "C:\\Users\\corwi\\source\\repos\\Remove-Ammo\\RemoveAmmo\\RemoveAmmo.csproj",
       "packagesPath": "C:\\Users\\corwi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\corwi\\OneDrive\\Documents\\TLD Modding\\RemoveAmmo\\RemoveAmmo\\obj\\",
+      "outputPath": "C:\\Users\\corwi\\source\\repos\\Remove-Ammo\\RemoveAmmo\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\corwi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4778,7 +4773,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4791,7 +4785,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net6.0": {
@@ -4813,12 +4813,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

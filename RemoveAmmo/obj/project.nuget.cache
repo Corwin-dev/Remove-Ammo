@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EqGNMlUlS8uCUB6EMnRytyPwLxUzuqPxArjXeAwDrTZy4/2utWLGZtqG9kFj3k9jvuXneSmcAOCqKjLPGa8w5w==",
+  "dgSpecHash": "yhNX6m53MWQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\corwi\\OneDrive\\Documents\\TLD Modding\\RemoveAmmo\\RemoveAmmo\\RemoveAmmo.csproj",
+  "projectFilePath": "C:\\Users\\corwi\\source\\repos\\Remove-Ammo\\RemoveAmmo\\RemoveAmmo.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\corwi\\.nuget\\packages\\asmresolver\\5.0.0\\asmresolver.5.0.0.nupkg.sha512",
     "C:\\Users\\corwi\\.nuget\\packages\\asmresolver.dotnet\\5.0.0\\asmresolver.dotnet.5.0.0.nupkg.sha512",
@@ -81,7 +81,10 @@
     "C:\\Users\\corwi\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\corwi\\.nuget\\packages\\system.text.json\\6.0.7\\system.text.json.6.0.7.nupkg.sha512",
     "C:\\Users\\corwi\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\corwi\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\corwi\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\corwi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\corwi\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "C:\\Users\\corwi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
   ],
   "logs": []
 }

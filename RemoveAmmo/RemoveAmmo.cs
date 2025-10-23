@@ -4,7 +4,7 @@ using Il2Cpp;
 
 namespace RemoveAmmo
 {
-    internal class RemoveAmmo : MelonMod
+    internal class Main : MelonMod
     {
         internal static readonly List<string> rifleNames = new()
         {
@@ -37,7 +37,7 @@ namespace RemoveAmmo
             "DesignGear"
         };
 
-        internal static readonly List<string> protectedScenes = new()
+        internal static readonly List<string> protectedScenes = new List<string>()
         {
             "DontDestroyOnLoad",
             "HideAndDontSave"
@@ -117,12 +117,6 @@ namespace RemoveAmmo
             PlayerPrefs.SetString("RemoveRifleAmmo_" + saveName, removeRifleAmmo);
             PlayerPrefs.SetString("RemoveRevolverAmmo_" + saveName, removeRevolverAmmo);
             PlayerPrefs.Save();
-        }
-
-        internal static void ClearSettings()
-        {
-            Settings.options.removeRifleAmmo = false;
-            Settings.options.removeRevolverAmmo = false;
         }
 
         internal static void DeleteSettings(string saveName)

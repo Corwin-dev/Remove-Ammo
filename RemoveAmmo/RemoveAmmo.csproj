@@ -32,11 +32,23 @@
 		<!--If the mod references any other mods (such as ModSettings), that NuGet package will also need to be listed here.-->
 	</ItemGroup>
 	<ItemGroup>
+	  <Reference Include="Assembly-CSharp">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TheLongDark\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+	  </Reference>
+	  <Reference Include="MelonLoader">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TheLongDark\MelonLoader\net35\MelonLoader.dll</HintPath>
+	  </Reference>
 	  <Reference Include="ModData">
-	    <HintPath>..\ModData.dll</HintPath>
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TheLongDark\Mods\ModData.dll</HintPath>
 	  </Reference>
 	  <Reference Include="ModSettings">
 	    <HintPath>..\ModSettings.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TheLongDark\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+	  </Reference>
+	  <Reference Include="UnityEngine.CoreModule">
+	    <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\TheLongDark\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
 	  </Reference>
 	</ItemGroup>
 </Project>

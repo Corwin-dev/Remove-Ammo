@@ -8,7 +8,7 @@ namespace RemoveAmmo
     {
         private static void Postfix(Il2Cpp.Container __instance)
         {
-            RemoveAmmo.ScanContainer(__instance);
+            Main.ScanContainer(__instance);
         }
     }
 
@@ -17,7 +17,7 @@ namespace RemoveAmmo
     {
         private static void Postfix(Il2Cpp.GunItem __instance)
         {
-            RemoveAmmo.ScanGun(__instance);
+            Main.ScanGun(__instance);
         }
     }
     [HarmonyPatch(typeof(GearItem), nameof(GearItem.Awake))]
@@ -25,7 +25,7 @@ namespace RemoveAmmo
     {
         private static void Postfix(GearItem __instance)
         {
-            RemoveAmmo.DeactivateLooseAmmo(__instance);
+            Main.DeactivateLooseAmmo(__instance);
         }
     }
     
@@ -34,7 +34,7 @@ namespace RemoveAmmo
     {
         private static void Postfix(GearItem __instance)
         {
-            RemoveAmmo.DeactivateLooseAmmo(__instance);
+            Main.DeactivateLooseAmmo(__instance);
         }
     }
 
@@ -43,11 +43,7 @@ namespace RemoveAmmo
     {
         private static void Prefix()
         {
-            RemoveAmmo.SaveSettings();
-        }
-        private static void Postfix()
-        {
-            RemoveAmmo.ClearSettings();
+            Main.SaveSettings();
         }
     }
 
@@ -56,7 +52,7 @@ namespace RemoveAmmo
     {
         private static void Postfix(string name)
         {
-            RemoveAmmo.DeleteSettings(name);
+            Main.DeleteSettings(name);
         }
     }
 }

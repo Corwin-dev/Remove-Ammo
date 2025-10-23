@@ -6,7 +6,7 @@ using System.Reflection;
 
 [assembly: AssemblyVersion(BuildInfo.ModVersion)]
 [assembly: AssemblyFileVersion(BuildInfo.ModVersion)]
-[assembly: MelonInfo(typeof(ModNamespace.RemoveAmmo), BuildInfo.ModName, BuildInfo.ModVersion, BuildInfo.ModAuthor)]
+[assembly: MelonInfo(typeof(RemoveAmmo.Main), BuildInfo.ModName, BuildInfo.ModVersion, BuildInfo.ModAuthor)]
 
 [assembly: MelonGame("Hinterland", "TheLongDark")]
 
